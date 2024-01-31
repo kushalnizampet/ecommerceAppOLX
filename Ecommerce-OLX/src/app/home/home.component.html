@@ -1,0 +1,28 @@
+<h1 style="color: black;text-align: center;font-size: 24px;font-weight: bold;background-color: #FFDB58;height: 30px;">
+  <mat-icon>supervised_user_circle</mat-icon>OLX APP</h1>
+<div class="forms"  style="background-color: hsl(203, 64%, 23%)">
+    <div class="form">
+    <h1 style="margin-top: 60px;" class="login-heading">Login</h1>
+      <form #loginform="ngForm">
+        <mat-form-field>
+          <mat-label>User Name</mat-label>
+          <input matInput placeholder="username" name="username" [(ngModel)]="this.loginObj.username" #username="ngModel" required>
+          <span class="error-msg" *ngIf="username.invalid && username.touched">Enter this field</span><br>
+        </mat-form-field><br>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="password" name="password" [(ngModel)]="this.loginObj.password" type="password" #password="ngModel" required>
+          <span class="error-msg" *ngIf="password.invalid && password.touched && password.value.length!=6" >Enter this field</span><br>
+        </mat-form-field><br>
+      <button mat-button style="cursor: pointer;" class="login-btn" (click)="loginData()" [disabled]="loginform.invalid" >Login</button><br>
+      <span style="color: grey;cursor: pointer;color: #faf6f6;;">New to App?</span><br>
+      <a routerLink="signIn"><span style="cursor: pointer;">Create a new Account?</span></a>
+      </form>
+    </div>
+    <div>
+      <img src="https://peddleup.com/assets/images/bg-login.png" alt="" style="margin-top: 90px; margin-left: 200px;height: 280px;">
+      <img src="" alt="">
+    </div>
+
+
+</div>

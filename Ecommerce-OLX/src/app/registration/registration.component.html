@@ -1,0 +1,35 @@
+<h1 style="color: black;text-align: center;font-size: 24px;font-weight: bold;background-color: #FFDB58;height: 30px;">
+  <mat-icon>supervised_user_circle</mat-icon>OLX APP</h1>
+  <div class="forms" style="display: flex;">
+      <div class="reg-page">
+        <h1 style="color: #FFDB58;;">Registration Page</h1>
+        <form #form="ngForm">
+          <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="firstname" name="firstname" [(ngModel)]="this.registrationObj.firstname" required #firstname="ngModel">
+            <span class="error-msg" *ngIf="firstname.invalid && firstname.touched">Enter First Name</span><br>
+          </mat-form-field><br>
+          <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="lastname" name="lastname" [(ngModel)]="this.registrationObj.lastname" #lastname="ngModel" >
+          </mat-form-field><br>
+          <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="username" name="username" [(ngModel)]="this.registrationObj.username" required #username="ngModel">
+            <span class="error-msg" *ngIf="username.invalid && username.touched">Enter username</span><br>
+          </mat-form-field><br>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" name="password" [(ngModel)]="this.registrationObj.password" required #password="ngModel" type="password" >
+            <span class="error-msg" *ngIf="password.invalid && password.touched && password.value.length!=6">Enter Password</span><br>
+          </mat-form-field><br>
+        <button mat-raised-button  (click)="submitData()" style="cursor: pointer;background-color: #FFDB58;" [disabled]="form.invalid">Submit</button>
+        </form>
+        <a routerLink="/" style=" cursor: pointer;text-decoration: none;">
+        <p style="margin-top: 15px;color: #FFDB58;cursor: pointer;">After Registration U can Login here!</p>
+        </a>
+      </div>
+      <div >
+        <img src="../../assets/register.jpg" alt="register-img" style="height: 350px;margin-left: 150px;margin-top: 50px;">
+      </div>
+   </div>

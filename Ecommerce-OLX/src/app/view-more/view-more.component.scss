@@ -1,0 +1,63 @@
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lilita+One&display=swap');
+.image{
+    height: 360px;
+}
+.productName{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+.company{
+    font-size: 20px;
+    color:  black;
+    font-weight: 600;
+    margin-left: 10px;
+    font-style: oblique;
+
+}
+.price{
+    font-size: 58px;
+    font-weight: bold;
+    color: #FFDB58;
+    margin-left: 10px;
+    margin-top: 35px;
+}
+.quantity{
+    margin-top: 35px;
+    margin-left: 10px;
+}
+.quantityIn{
+    height: 40px;
+    width: 40px;
+    // background-color: #FFDB58;
+    background-color: #154360;
+    font-size: 20px;
+    cursor: pointer;
+}
+.quantityText{
+    height: 33px;
+    width: 40px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    color: #154360;
+    font-weight: bold;
+}
+.addToCart{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.productText{
+    font-size: 13px;
+    margin-left: 10px;
+    color:  #AAFFC3;
+}
+.quantity{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}

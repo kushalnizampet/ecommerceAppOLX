@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div style="height: 88.8%;text-align: center;display: flex;background-color: #154360; ">
+     <div class="con">
+        <h1 style="color: #FFDB58;font-size: 40px;padding-top: 80px;font-weight: bold;">Select Payment Gateway</h1>
+        <form #loginForm="ngForm" style="text-align: left;margin-left: 120px;">
+            <mat-radio-button class="example-margin" value="CreditCard" (click)="onselect('CreditCard')"><span style="color: white;">CreditCard</span></mat-radio-button><br>
+            <mat-radio-button class="example-margin" value="DebitCard" (click)="onselect('DebitCard')"><span style="color:white;">DebitCard</span></mat-radio-button><br>
+            <mat-radio-button class="example-margin" value="UPI" (click)="onselect('UPI')"><span style="color:white;">UPI</span></mat-radio-button><br>
+            <mat-radio-button class="example-margin" value="COD" (click)="onselect('COD')"><span style="color:white;">COD</span></mat-radio-button><br>
+            <button mat-raised-button color="warn" routerLink="/thank" *ngIf="showflag">submit</button> 
+        </form>
+        </div>
+     <div>
+        <img src="../../assets/payment-logo.png" alt="Payment" style="height: 350px;padding-top: 50px;margin-left: 100px;">
+     </div>
+
+</div>

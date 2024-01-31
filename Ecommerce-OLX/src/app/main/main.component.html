@@ -1,0 +1,23 @@
+<app-header [totalCartData]="cartLength"></app-header>
+<div class="con" style="background-color: #808080;padding-bottom: 30px;">
+<div class="container">
+<div >
+  <h1 style="font-size: 75px;padding-top: 90px;color: #FFDB58;">Welcome To OLX Store</h1>
+  <h2 style="font-size: 18px;padding-top: 15px;">You can sell and buy products here</h2>
+</div>
+<h4 style="color: aquamarine;">U can sell the product by clicking on the below</h4>
+<button mat-raised-button color="warn" (click)="openDialog()">Add Product</button>
+</div>
+<mat-card class="example-card" *ngFor="let data of ProductList" >
+  <mat-card-header  style="justify-content: center;border-radius: 5px;" >
+    <img mat-card-image src="{{data.imageUrl}}" alt=""image class="image">
+  </mat-card-header>
+  <mat-card-content  style="text-align: left;color: black;" >
+    <h1 class="card-price">{{data.price | currency:'INR'}} </h1>
+    <p  class="card-heading">Name: <span  class="card-heading-value">{{data.productName}}</span></p>
+    <p  class="card-heading">Company: <span  class="card-heading-value">{{data.brandName}}</span></p>
+    <p  class="card-heading">Type: <span  class="card-heading-value">{{data.freshness}}</span></p>
+    <button mat-raised-button color="warn" style="cursor: pointer;padding-top: 5px;" [routerLink]="['/view',data.id]">view more</button>
+  </mat-card-content>
+</mat-card> 
+</div>

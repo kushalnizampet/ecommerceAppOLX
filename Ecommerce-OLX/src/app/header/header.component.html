@@ -1,0 +1,12 @@
+<mat-toolbar style="background-color:#FFDB58;">
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>supervised_user_circle</mat-icon>
+  </button>
+  <span  style="color: #154360;font-weight: bold;">OLX SPAM</span>
+  <span class="example-spacer"></span>
+  <div class="icons" >
+  <mat-icon routerLink="/contact" style="cursor: pointer;font-size: 25px;">contact_support</mat-icon>
+  <mat-icon routerLink="/cart" style="cursor: pointer;margin-right: 15px;margin-left: 10px;" aria-hidden="false"   matBadge="{{totalCartData}}" matBadgeColor="warn">shopping_cart</mat-icon>
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>

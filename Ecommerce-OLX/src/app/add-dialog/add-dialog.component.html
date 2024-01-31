@@ -1,0 +1,92 @@
+<h1 mat-dialog-title>Add  Product </h1>
+<mat-icon mat-dialog-close style="cursor: pointer;position: absolute;left: 950px;top: 17px;color: red;">cancel</mat-icon>
+<div mat-dialog-content>
+    <form [formGroup]="productForm" (ngSubmit)="onFormSubmit()">
+        <!-- formgroup name should always be same with the ts file prodctForm: FormGroup -->
+        <mat-form-field appearance="outline" style="margin-top: 5px;">
+            <mat-label>Product Name</mat-label>
+            <input matInput placeholder="ProductName" formControlName="productName">
+        </mat-form-field>
+        
+        <!-- imageUrl -->
+        <mat-form-field appearance="outline" style="margin-top: 5px;">
+          <mat-label>Image url</mat-label>
+          <input matInput placeholder="Image url" formControlName="imageUrl">
+        </mat-form-field>
+
+        <!-- category -->
+        <mat-form-field appearance="outline">
+            <mat-label>Product Category</mat-label>
+            <mat-select placeholder="Category" formControlName="category">
+                <mat-option value="Furniture">Furniture</mat-option>
+                <mat-option value="Automobiles">Automobiles</mat-option>
+                <mat-option value="Electronics">Electronics</mat-option>
+                <mat-option value="Clothing">Clothing</mat-option>
+            </mat-select>        
+        </mat-form-field>
+
+          <!-- product Freshness  -->
+          <label><h1>Product Freshness</h1></label>
+          <mat-radio-group class="example-radio-group" formControlName="freshness">
+            <mat-radio-button *ngFor="let fresh of freshnessList" [value]="fresh" class="example-radio-button">
+                {{fresh}}
+            </mat-radio-button>
+          </mat-radio-group>
+
+          <!-- price -->
+          <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput placeholder="Price" type="number" formControlName="price">
+          </mat-form-field>
+
+          <!-- brand name  -->
+          <mat-form-field appearance="outline" >
+            <mat-label>Brand Name</mat-label>
+            <input matInput placeholder="Brand Name" type="text" formControlName="brandName">
+          </mat-form-field>
+
+            <!-- comment  -->
+          <mat-form-field appearance="outline">
+            <mat-label>Comment</mat-label>
+            <textarea matInput formControlName="comment"></textarea>
+          </mat-form-field>
+
+        <!-- sellername  -->
+        <mat-form-field appearance="outline">
+            <mat-label>Seller Name</mat-label>
+            <input matInput placeholder="Seller Name" type="text" formControlName="seller">
+        </mat-form-field>
+
+        <div class="row" style="display: flex;">
+        <!-- contact number  -->
+         <mat-form-field appearance="outline">
+            <mat-label>Contact Number</mat-label>
+            <input matInput placeholder="Contact Number" type="number" formControlName="contact">
+         </mat-form-field>
+            
+         <!-- city -->
+         <mat-form-field appearance="outline"style="padding-left: 5px;">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="City" type="text" formControlName="location">
+        </mat-form-field>
+        </div>
+        
+        <div class="1"style="display: flex;">
+            <!-- address  -->
+            <mat-form-field appearance="outline" >
+                <mat-label>Address</mat-label>
+                <textarea matInput formControlName="Address" placeholder="Address"></textarea>
+            </mat-form-field>
+
+            <!-- pincode  -->
+            <mat-form-field appearance="outline" style="padding-left: 5px;">
+                <mat-label>Pincode</mat-label>
+                <input matInput placeholder="pincode" type="number" formControlName="pincode">
+            </mat-form-field>
+        </div>
+    </form>
+    <div mat-dialog-action [align]="'end'">
+        <!-- mat-dialog-close is used so that to close dialog box -->
+    <button mat-raised-button color="primary" mat-dialog-close style="margin-left: 8px;">save</button>
+    </div>
+</div>

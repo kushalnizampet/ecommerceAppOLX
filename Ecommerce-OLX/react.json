@@ -1,0 +1,104 @@
+{
+  "productList": [
+    {
+      "productName": "has",
+      "category": "Vegetables",
+      "freshness": "Second Hand",
+      "price": 12345,
+      "comment": "fas",
+      "date": "2023-11-14T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "jhwjq",
+      "category": "Vegetables",
+      "freshness": "Second Hand",
+      "price": 12,
+      "comment": "hjsahj",
+      "date": "2023-11-20T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "apple",
+      "category": "Fruits",
+      "freshness": "BrandNew",
+      "price": 30,
+      "comment": "fresh",
+      "date": "2023-11-14T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "pinapple",
+      "category": "Fruits",
+      "freshness": "BrandNew",
+      "price": 123,
+      "comment": "not fresh",
+      "date": "2023-11-21T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Iphone 7s",
+      "category": "Fruits",
+      "freshness": "Second Hand",
+      "price": 60000,
+      "comment": "Its in good condition",
+      "date": "2023-11-13T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "deepak",
+      "category": "Vegetables",
+      "freshness": "Second Hand",
+      "price": 12345,
+      "comment": "jsajkd",
+      "date": "2023-11-15T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Laptop",
+      "category": "Fruits",
+      "freshness": "Second Hand",
+      "price": 890000,
+      "comment": "Good Featured",
+      "date": "2023-11-20T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "productName": "Onions",
+      "category": "Vegetables",
+      "freshness": "BrandNew",
+      "price": 8923232,
+      "comment": "Big Onions",
+      "date": "2023-11-22T18:30:00.000Z",
+      "id": 8
+    },
+    {
+      "productName": "Apples",
+      "category": "Fruits",
+      "freshness": "Second Hand",
+      "price": 4000,
+      "comment": "Red Apples",
+      "date": "2023-11-29T18:30:00.000Z",
+      "id": 9
+    },
+    {
+      "productName": "MAniiii",
+      "category": "Fruits",
+      "freshness": "Second Hand",
+      "price": 69,
+      "comment": "chubby",
+      "date": "2023-11-14T18:30:00.000Z",
+      "id": 10
+    },
+    {
+      "productName": "hhj",
+      "category": "Fruits",
+      "freshness": "BrandNew",
+      "price": 1234,
+      "comment": "gfgh",
+      "date": "2023-11-21T18:30:00.000Z",
+      "id": 11
+    }
+  ]
+ 
+}

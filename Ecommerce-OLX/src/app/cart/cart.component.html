@@ -1,0 +1,31 @@
+
+<app-header [totalCartData]="cartLength"></app-header>
+<div class="container" style="background-color: #154360;height: 100%;" >
+  <mat-card class="example-card" *ngFor="let data of cartProducts" >
+    <mat-card-header  style="justify-content: center;border-radius: 5px;">
+      <img mat-card-image src={{data.imgUrl}} alt=""image class="image">  
+    </mat-card-header>
+    <mat-card-content  style="text-align: left;color: black;">
+      <h1 class="itemPrice">{{data.price | currency:"INR"}} </h1>
+      <p  class="specs">Quantity: <span style="font-weight: 500;">{{data.quantity}}</span></p>
+      <p  class="specs">Name: <span style="font-weight: 500;">{{data.prodName}}</span></p>
+      <p  class="specs">Category: <span style="font-weight: 500;">{{data.category}}</span></p>
+    <button mat-raised-button color="warn" (click)="deleteData(data.id,data.totalPrice)">delete</button>
+    </mat-card-content>
+  </mat-card> 
+  <div style="justify-content: center;text-align: center;margin-top: 18px;width: 500px;margin-left: 400px;" >
+    <h1 class="totalPrice">Total price: {{CartPrice | currency: "INR"}} </h1>
+  </div>
+  <div *ngIf="cartLength>=1" style="background-color: #154360;justify-content: center;display: flex;">
+    <button mat-raised-button color="warn" routerLink="/checkOut" class="checkout">Checkout</button>
+  </div>
+  <div *ngIf="cartLength===0" style="background-color: #154360;justify-content: center;display: flex;">
+    <img src="https://cdn.dribbble.com/users/2046015/screenshots/4591856/first_white_girl_drbl.gif" alt="img" style="height: 240px;margin-top: 10px;">
+  </div>
+  <div *ngIf="cartLength===0" style="background-color: #154360;justify-content: center;display: flex;">
+    <h1 style="color: #FFDB58;font-size: 60px;margin-top: 25px;">No items in cart</h1>
+  </div>
+  <div *ngIf="cartLength===0" style="background-color: #154360;justify-content: center;display: flex;">
+    <h4 style="color: #f44336;font-size: 19px;cursor: pointer;" routerLink="/main" class="addProduct">Please click here to add products!!</h4>
+  </div>
+</div>
